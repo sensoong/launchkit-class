@@ -37,6 +37,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .who button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg) }
 .who .state { color: var(--muted) }
 .who .state.bad { color: var(--warn-fg, #c0392b) }
+.who .mail { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px }
+.who input { font: inherit; padding: 5px 12px; border-radius: 99px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); min-width: 0; width: 15em; max-width: 100% }
 .brand { font-family: var(--display); font-size: 22px; line-height: 1.1; white-space: nowrap; color: var(--accent) }
 .tabs { display: flex; gap: 6px; overflow-x: auto; min-width: 0; scrollbar-width: none }
 .tabs a { display: flex; flex-direction: column; padding: 6px 14px; border-radius: 12px; color: var(--fg); text-decoration: none; line-height: 1.25; white-space: nowrap; border: 1px solid transparent }
@@ -212,7 +214,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 </div></section>
 <section class="step" id="s1-2-card"><div class="step-no" aria-hidden="true">2</div><div class="step-body"><h3><span class="step-label">Step 2</span>14일 테스트 테스터 모으기</h3><label class="done-box"><input type="checkbox" class="done" id="s1-2"><span>다 했어요</span></label>
 <p>구글은 새 계정에 <strong>"테스터 12명 × 14일 테스트"</strong> 를 마쳐야 출시를 허락해요.</p>
-<ol start="1"><li>반 공용 시트에 각자 <strong>Gmail 주소</strong>를 적어요.</li><li>서로의 테스터가 되어 줘요.</li></ol>
+<ol start="1"><li>이 페이지 맨 위, 내 이름 옆의 <strong>테스터 Gmail 등록하기</strong>에 <strong>안드로이드 폰에서 쓰는 Gmail</strong>을 적어요.</li><li>서로의 테스터가 되어 줘요.</li></ol>
 <aside class="note ok"><div class="note-label">확인</div><p>출시 순서는 <strong>원스토어 먼저 → 그동안 구글 14일 테스트 → 구글 출시</strong>예요.</p></aside>
 <details class="note why"><summary><span class="note-label">왜 이렇게 해요?</span><span class="peek">왜 14일이나 기다려요?</span></summary><div class="note-body"><p>대충 만든 앱이 너무 많이 올라오는 걸 막으려고 구글이 2023년부터 만든 규칙이에요. 줄일 수 없으니 출시 날짜를 정할 때 14일을 먼저 넣어서 계산해요.</p></div></details>
 <details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">아이폰만 있는 친구는요?</span></summary><div class="note-body"><p>테스터는 안드로이드 폰이 있어야 해요. 가족의 안드로이드 폰을 빌릴 수 있는지 물어봐요.</p></div></details>
@@ -883,7 +885,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <section class="step" id="s5-12-card"><div class="step-no" aria-hidden="true">12</div><div class="step-body"><h3><span class="step-label">Step 12</span>비공개 테스트에 AAB 올리기</h3><label class="done-box"><input type="checkbox" class="done" id="s5-12"><span>다 했어요</span></label>
 <ol start="1"><li><strong>테스트 및 출시 &gt; 테스트 &gt; 비공개 테스트</strong> → <strong>트랙 만들기</strong>(이름 예: 반 친구 테스트)</li><li><strong>테스터</strong> 탭 → 선생님이 알려 준 <strong>Google 그룹 주소</strong> 추가 (또는 이메일 목록)</li><li><strong>새 버전 만들기</strong> → Play 앱 서명 <strong>동의</strong> → Step 6의 AAB 올리기 → 출시 노트 한 줄</li><li><strong>검토로 보내기</strong> → <strong>출시 시작</strong></li></ol>
 <aside class="note ok"><div class="note-label">확인</div><p>테스터 탭에 <strong>"테스터가 참여할 링크"</strong> 가 생겼어요.</p></aside>
-<details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">반 테스터 모으기</span></summary><div class="note-body"><p>구글 그룹(groups.google.com)을 하나 만들고, 1회차에 모은 Gmail 주소를 모두 넣어요. 학생들은 각자 비공개 테스트에 <strong>이 그룹 주소 하나만</strong> 추가하면 반 전체가 테스터가 돼요. 반 친구가 12명보다 적으면 가족 계정도 그룹에 넣어요.</p></div></details>
+<details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">반 테스터 모으기</span></summary><div class="note-body"><p>구글 그룹(groups.google.com)을 하나 만들고, 진행표 시트 <strong>명단 탭 B열</strong>(학생들이 등록한 Gmail)을 복사해 회원으로 모두 넣어요. 학생들은 각자 비공개 테스트에 <strong>이 그룹 주소 하나만</strong> 추가하면 반 전체가 테스터가 돼요. 그룹 인원이 12명보다 적거나 빠지는 친구가 생길 수 있으니, 여유 있게 가족 계정도 몇 개 넣어 두면 안전해요.</p></div></details>
 </div></section>
 <section class="step" id="s5-13-card"><div class="step-no" aria-hidden="true">13</div><div class="step-body"><h3><span class="step-label">Step 13</span>서로의 테스터 되기</h3><label class="done-box"><input type="checkbox" class="done" id="s5-13"><span>다 했어요</span></label>
 <ol start="1"><li>친구들이 반 공용 시트에 올린 <strong>테스터 링크</strong>를 폰에서 열기 (그룹에 넣은 Gmail로 로그인한 폰)</li><li><strong>테스터 되기</strong> → <strong>Google Play에서 다운로드</strong> → 설치</li><li><strong>14일 동안 지우지 않기.</strong> 가끔 켜서 한 판씩 해 줘요</li></ol>
@@ -2067,12 +2069,55 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
     change.type = 'button';
     change.addEventListener('click', function () { pick(true); });
     who.appendChild(change);
+    who.appendChild(mailBox);
+  }
+
+  // 구글 14일 테스트용 Gmail. 시트 명단에 저장되고, 페이지에는 가린 모양(ab****@gmail.com)만 와요.
+  var mailBox = el('span', '', 'mail'), myMail = null;
+  function showMail() {
+    mailBox.textContent = '';
+    if (myMail === null) return;
+    var b = el('button', myMail ? 'Gmail ' + myMail + ' · 바꾸기' : '테스터 Gmail 등록하기', myMail ? '' : 'primary');
+    b.type = 'button';
+    b.addEventListener('click', editMail);
+    mailBox.appendChild(b);
+  }
+  function editMail() {
+    mailBox.textContent = '';
+    var input = el('input'); input.type = 'email'; input.placeholder = '예: name@gmail.com';
+    input.setAttribute('aria-label', '테스터 Gmail'); input.autocomplete = 'email';
+    var ok = el('button', '저장', 'primary'), cancel = el('button', '취소'), msg = el('span', '', 'state');
+    ok.type = cancel.type = 'button';
+    cancel.addEventListener('click', showMail);
+    function send() {
+      var v = input.value.trim();
+      if (!/^[A-Za-z0-9][A-Za-z0-9._%+-]*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/.test(v)) {
+        msg.textContent = '이메일 모양을 확인해 주세요.'; msg.classList.add('bad'); return;
+      }
+      ok.disabled = true; msg.classList.remove('bad'); msg.textContent = '저장 중…';
+      fetch(P.url, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ key: P.key, name: me, action: 'email', email: v }) })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res.ok) throw new Error(res.error || 'fail');
+          myMail = res.email || ''; showMail();
+        })
+        .catch(function (e) {
+          ok.disabled = false; msg.classList.add('bad');
+          msg.textContent = e.message === 'email' ? '이메일 모양을 확인해 주세요.' : '저장하지 못했어요. 인터넷 연결을 확인해 주세요.';
+        });
+    }
+    ok.addEventListener('click', send);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') send(); });
+    mailBox.appendChild(input); mailBox.appendChild(ok); mailBox.appendChild(cancel); mailBox.appendChild(msg);
+    input.focus();
   }
   function load() {
     showMe(); setState('진행표 불러오는 중…');
     api({ action: 'progress', name: me }).then(function (res) {
       if (res.error === 'name') { me = ''; ls(NAME_KEY, null); pick(false); return; }
       if (res.error) throw new Error(res.error);
+      myMail = typeof res.email === 'string' ? res.email : null; showMail();
       var server = res.done || {};
       // 이 기기에만 있던 체크(인터넷이 끊겼을 때 등)는 올려 보낸다
       document.querySelectorAll('.done').forEach(function (b) {
@@ -2088,7 +2133,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
     // 다른 학생이 쓰던 기기라면 이 기기의 체크를 비우고 내 진행표를 불러온다
     var owner = ls(OWNER_KEY);
     if (owner && owner !== name) { done = {}; queue = []; saveQ(); applyDone(); }
-    me = name; ls(NAME_KEY, name); ls(OWNER_KEY, name);
+    me = name; ls(NAME_KEY, name); ls(OWNER_KEY, name); myMail = null; showMail();
     load();
   }
   function pick(canCancel) {
