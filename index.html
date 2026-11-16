@@ -803,8 +803,8 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">오늘은 보호자와 같이</span></summary><div class="note-body"><p>두 스토어 모두 <strong>보호자 계정</strong>으로 로그인해요. 1회차에 만든 서명 키 파일과 비밀번호, 보호자 휴대폰(인증 문자)이 필요해요.</p></div></details>
 <h2>1부. 스토어 자료 만들기</h2>
 <section class="step" id="s5-1-card"><div class="step-no" aria-hidden="true">1</div><div class="step-body"><h3><span class="step-label">Step 1</span>기본 정보 적기</h3><label class="done-box"><input type="checkbox" class="done" id="s5-1"><span>다 했어요</span></label>
-<p>메뉴 <strong>LaunchKit &gt; 스토어 자료 만들기</strong> 를 열고 맨 위 칸을 채워요. 오늘 누르는 버튼은 모두 <strong>이 창 안에</strong> 있어요. (메뉴에는 없어요)</p>
-<div class="table"><table><thead><tr><th>칸</th><th>적을 것</th></tr></thead><tbody><tr><td>게임 이름</td><td>스토어에 보일 이름</td></tr><tr><td>개발자 이름</td><td>스토어 계정 주인(보호자) 이름</td></tr><tr><td>연락 이메일</td><td>스토어에 공개되는 문의 메일</td></tr><tr><td>GitHub 아이디</td><td>Step 2에서 만들어요. 일단 비워 둬도 돼요</td></tr></tbody></table></div>
+<p>메뉴 <strong>LaunchKit &gt; 스토어 자료 만들기</strong> 를 열고 맨 위 칸을 채워요. 오늘 누르는 버튼은 모두 <strong>이 창 안에</strong> 있어요. (스크린샷 찍기와 출시용 AAB 만들기는 <strong>LaunchKit</strong> 메뉴에도 있어요)</p>
+<div class="table"><table><thead><tr><th>칸</th><th>적을 것</th></tr></thead><tbody><tr><td>게임 이름</td><td>스토어에 보일 이름</td></tr><tr><td>개발자 이름</td><td>스토어 계정 주인(보호자) 이름</td></tr><tr><td>연락 이메일</td><td>스토어에 공개되는 문의 메일</td></tr><tr><td>GitHub 아이디</td><td>Step 2에서 만들어요. 지금은 비워 두고, 가입한 다음에 채워요</td></tr></tbody></table></div>
 <aside class="note ok"><div class="note-label">확인</div><p><strong>사용 중인 기능</strong>에 Firebase, AdMob 광고가 보여요. (켠 것만 나와요)</p></aside>
 <details class="note why"><summary><span class="note-label">왜 이렇게 해요?</span><span class="peek">이 정보는 어디에 써요?</span></summary><div class="note-body"><p>개인정보처리방침, 제출 메모, AAB 파일 이름에 자동으로 들어가요. 적은 내용은 프로젝트 폴더의 <code>StoreFiles/store_info.json</code>에 저장돼요.</p></div></details>
 </div></section>
@@ -812,6 +812,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <p>광고나 기록 기능이 있는 앱은 <strong>개인정보처리방침 주소</strong>가 꼭 있어야 해요. 내 GitHub에 무료로 올려요.</p>
 <ol start="1"><li><a href="https://github.com" rel="noopener">github.com</a> 가입 (아이디는 영어 소문자로, 주소에 그대로 나와요)</li><li>스토어 자료 창에 <strong>GitHub 아이디</strong> 적기 → 창 안의 <strong>웹사이트 파일 만들기</strong> 버튼</li><li>GitHub에서 <strong>New repository</strong> → 이름을 정확히 <strong><code>아이디.github.io</code></strong> → <strong>Public</strong> → <strong>Create</strong></li><li><strong>uploading an existing file</strong> → <code>StoreFiles/website</code> 안의 파일을 <strong>전부</strong> 끌어다 놓기 → <strong>Commit changes</strong></li><li>1~2분 뒤 창의 <strong>개인정보처리방침</strong> 주소를 브라우저로 열기</li><li>AdMob을 켰다면 4회차 Step 13의 <strong>동의 메시지</strong>에 이 주소를 넣고 다시 게시</li></ol>
 <aside class="note ok"><div class="note-label">확인</div><p><code>https://아이디.github.io/privacy.html</code> 이 열리고 내 게임 이름이 보여요.</p></aside>
+<details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">웹사이트 파일 만들기 버튼이 회색이에요</span></summary><div class="note-body"><p>Step 1의 <strong>네 칸</strong>(게임 이름, 개발자 이름, 연락 이메일, GitHub 아이디)을 다 채워야 켜져요. 버튼 위 노란 상자에 빠진 칸이 적혀 있어요.</p></div></details>
 <details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">404 페이지가 나와요</span></summary><div class="note-body"><p>① 저장소 이름이 <code>아이디.github.io</code> 와 <strong>한 글자도 다르지 않은지</strong> ② Public인지 ③ 저장소 <strong>Actions</strong> 탭에 초록 체크가 떴는지 봐요. 빨간색이면 <strong>Re-run jobs</strong> 를 눌러요.</p></div></details>
 <details class="more"><summary>방침 내용은 누가 정했어요? app-ads.txt는 뭐예요?</summary><div class="more-body"><p><strong>개인정보처리방침</strong>은 키트가 켜 둔 기능(Firebase, AdMob)에 맞춰 문장을 골라 만들어요. 내 게임에 <strong>로그인, 채팅, 랭킹 서버</strong> 같은 기능을 따로 넣었다면 그 내용은 들어 있지 않으니 선생님과 같이 고쳐요. 보호자가 한 번 읽어 보는 게 좋아요.</p>
 <p><strong>app-ads.txt</strong>는 "이 앱의 광고 수익은 이 AdMob 계정 것"이라는 증명서예요. 4회차에 내 AdMob 앱 ID를 넣었으면 같이 만들어져요. 남이 내 게임 이름으로 광고를 팔지 못하게 막아 줘요. <strong>사이트 맨 앞 주소</strong>에 있어야 해서 <code>아이디.github.io</code> 저장소를 쓰는 거예요.</p></div></details>
@@ -826,7 +827,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <p>스토어 자료 창 안의 버튼을 눌러요.</p>
 <ol start="1"><li><strong>512x512 아이콘 내보내기</strong> → <code>StoreFiles/icon/icon_512.png</code></li><li><strong>그래픽 이미지 만들기</strong> → <code>StoreFiles/graphics</code>에 구글용(1024x500), 원스토어용(1024x578)</li></ol>
 <aside class="note ok"><div class="note-label">확인</div><p>그래픽 이미지 가운데에 내 아이콘이 있고, 뒤에 마지막 스크린샷이 어둡게 깔려 있어요.</p></aside>
-<details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">버튼이 회색이에요 / 안 보여요</span></summary><div class="note-body"><p>창을 아래로 스크롤해요. <strong>웹사이트 파일 만들기</strong>는 Step 1의 네 칸을 다 채워야 켜져요.</p></div></details>
+<details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">버튼이 안 보여요</span></summary><div class="note-body"><p>창이 작으면 버튼이 아래에 숨어 있어요. 창을 아래로 스크롤하거나 창을 크게 늘려요.</p></div></details>
 <details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">아이콘이 없대요</span></summary><div class="note-body"><p><strong>Project Settings &gt; Player</strong> 맨 위 <strong>Default Icon</strong>에 1024x1024 그림을 넣고 다시 눌러요.</p></div></details>
 </div></section>
 <section class="step" id="s5-5-card"><div class="step-no" aria-hidden="true">5</div><div class="step-body"><h3><span class="step-label">Step 5</span>스토어 설명 쓰기</h3><label class="done-box"><input type="checkbox" class="done" id="s5-5"><span>다 했어요</span></label>
