@@ -234,7 +234,8 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 </div></section>
 <section class="step" id="s1-5-card"><div class="step-no" aria-hidden="true">5</div><div class="step-body"><h3><span class="step-label">Step 5</span>키트 가져오기</h3><label class="done-box"><input type="checkbox" class="done" id="s1-5"><span>다 했어요</span></label>
 <ol start="1"><li>내 게임을 Unity로 열어요.</li><li><code>LaunchKit.unitypackage</code>를 <strong>더블클릭</strong> → <strong>Import</strong></li><li>▶ 플레이</li></ol>
-<aside class="note ok"><div class="note-label">확인</div><p>메뉴에 <strong>LaunchKit</strong> 이 생기고, 화면 아래에 회색 <code>TEST BANNER</code>가 보여요.</p></aside>
+<aside class="note ok"><div class="note-label">확인</div><p>메뉴에 <strong>LaunchKit</strong> 이 생기고, ▶ 플레이하면 <strong>Console</strong>에 <code>[Analytics:Mock] 준비 완료</code>, <code>[Crash:Mock] 준비 완료</code>, <code>[Ads:Mock] 준비 완료</code> 세 줄이 보여요. 빨간 오류는 없어요.</p></aside>
+<details class="note why"><summary><span class="note-label">왜 이렇게 해요?</span><span class="peek">화면에 광고가 안 보여요</span></summary><div class="note-body"><p>정상이에요. 키트는 들어왔지만 아직 <strong>광고를 띄우라는 코드</strong>를 넣지 않았어요. 회색 <code>TEST BANNER</code>는 4회차에 배너 코드를 넣으면 나와요.</p></div></details>
 <details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">빨간 오류가 나요</span></summary><div class="note-body"><p><strong>Edit &gt; Project Settings &gt; Player &gt; Other Settings</strong> 의 <strong>Active Input Handling</strong> 이 <code>Input Manager (Old)</code>면 <code>Both</code>로 바꾸고 Unity가 다시 켜지길 기다려요.</p></div></details>
 </div></section>
 <section class="step" id="s1-6-card"><div class="step-no" aria-hidden="true">6</div><div class="step-body"><h3><span class="step-label">Step 6</span>출시 설정 점검</h3><label class="done-box"><input type="checkbox" class="done" id="s1-6"><span>다 했어요</span></label>
@@ -265,7 +266,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">켜자마자 꺼져요</span></summary><div class="note-body"><p><strong>Development Build</strong> 를 켜고 다시 Build And Run 하면 Unity Console에 폰의 오류가 보여요. 원인을 찾은 뒤에는 다시 꺼요.</p></div></details>
 </div></section>
 <section class="step" id="s1-10-card"><div class="step-no" aria-hidden="true">10</div><div class="step-body"><h3><span class="step-label">Step 10</span>폰에서 확인하기</h3><label class="done-box"><input type="checkbox" class="done" id="s1-10"><span>다 했어요</span></label>
-<ul class="checks"><li><label><input type="checkbox" class="check" id="s1-c5"><span>처음부터 끝까지 플레이돼요</span></label></li><li><label><input type="checkbox" class="check" id="s1-c6"><span>글자와 버튼이 잘리지 않아요 (잘리면 2회차에서 고쳐요)</span></label></li><li><label><input type="checkbox" class="check" id="s1-c7"><span>느리거나 뜨겁지 않아요</span></label></li><li><label><input type="checkbox" class="check" id="s1-c8"><span>화면 아래에 <code>TEST BANNER</code>가 보여요</span></label></li><li><label><input type="checkbox" class="check" id="s1-c9"><span>앱 목록에 내 게임 이름과 아이콘이 보여요</span></label></li></ul>
+<ul class="checks"><li><label><input type="checkbox" class="check" id="s1-c5"><span>처음부터 끝까지 플레이돼요</span></label></li><li><label><input type="checkbox" class="check" id="s1-c6"><span>글자와 버튼이 잘리지 않아요 (잘리면 2회차에서 고쳐요)</span></label></li><li><label><input type="checkbox" class="check" id="s1-c7"><span>느리거나 뜨겁지 않아요</span></label></li><li><label><input type="checkbox" class="check" id="s1-c8"><span>앱 목록에 내 게임 이름과 아이콘이 보여요</span></label></li></ul>
 <details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">친구와 폰 바꿔 보기</span></summary><div class="note-body"><p>폰 기종마다 화면 비율과 카메라 구멍 위치가 달라요. 서로의 게임을 설치해 보면 내 폰에서는 멀쩡하던 UI가 가려지는 걸 볼 수 있어요. 그걸 2회차에서 고쳐요.</p></div></details>
 </div></section>
 <h2>오늘 꼭 기억할 것</h2>
@@ -477,7 +478,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <section class="step" id="s2-12-card"><div class="step-no" aria-hidden="true">12</div><div class="step-body"><h3><span class="step-label">Step 12</span>Device Simulator로 확인하기</h3><label class="done-box"><input type="checkbox" class="done" id="s2-12"><span>다 했어요</span></label>
 <ol start="1"><li><strong>Game</strong> 창 왼쪽 위 <strong>Game</strong> → <strong>Simulator</strong> 로 바꾸기</li><li>카메라 구멍이 있는 기기 고르기 (Galaxy S, Pixel 등)</li><li>▶ 플레이 → <strong>회전</strong> 버튼으로 가로/세로 바꿔 보기</li></ol>
 <aside class="note ok"><div class="note-label">확인</div><p>어느 기기에서도 버튼과 점수가 가려지지 않아요.</p></aside>
-<details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">화면 아래 회색 TEST BANNER와 버튼이 겹쳐요</span></summary><div class="note-body"><p>4회차에 진짜 배너 광고가 그 자리에 붙어요. <strong>타이틀, 결과 화면</strong>의 아래쪽 버튼을 조금 올려요. 플레이 중에는 배너를 숨기니 괜찮아요.</p></div></details>
+<details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">배너 자리 미리 비워 두기</span></summary><div class="note-body"><p>4회차에 <strong>타이틀, 결과 화면</strong> 맨 아래에 배너 광고(높이 약 50)가 붙어요. 지금 그 화면들의 아래쪽 버튼을 조금 올려 두면 나중에 겹치지 않아요. 플레이 중에는 배너를 숨기니 괜찮아요.</p></div></details>
 </div></section>
 <h2>4부. 소리 설정</h2>
 <section class="step" id="s2-13-card"><div class="step-no" aria-hidden="true">13</div><div class="step-body"><h3><span class="step-label">Step 13</span>소리 버튼 만들기</h3><label class="done-box"><input type="checkbox" class="done" id="s2-13"><span>다 했어요</span></label>
