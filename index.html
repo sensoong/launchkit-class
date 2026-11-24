@@ -206,10 +206,10 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <ul class="checks"><li><label><input type="checkbox" class="check" id="s1-c1"><span>계정 주인이 정해졌다</span></label></li><li><label><input type="checkbox" class="check" id="s1-c2"><span>패키지 이름이 정해졌다</span></label></li><li><label><input type="checkbox" class="check" id="s1-c3"><span>서명 키를 2곳에 백업했다</span></label></li><li><label><input type="checkbox" class="check" id="s1-c4"><span>내 게임이 내 폰에서 돌아간다</span></label></li></ul>
 <h2>1부. 계정 준비</h2>
 <section class="step" id="s1-1-card"><div class="step-no" aria-hidden="true">1</div><div class="step-body"><h3><span class="step-label">Step 1</span>계정 주인 정하기</h3><label class="done-box"><input type="checkbox" class="done" id="s1-1"><span>다 했어요</span></label>
-<p>스토어 계정은 <strong>만 18세 이상</strong>만 만들 수 있어요. 그래서 <strong>보호자 이름으로</strong> 만들어요.</p>
+<p>구글 플레이 콘솔과 AdMob은 <strong>만 18세 이상</strong>만 가입할 수 있어요. 원스토어는 14세부터 가입할 수 있지만 수익 정산도 생각해서, 모두 <strong>보호자 이름으로</strong> 만들어요.</p>
 <aside class="note ok"><div class="note-label">확인</div><p>계정 주인과 쓸 구글 계정이 정해졌어요. 오래 걸리니 <strong>가장 먼저</strong> 시작해요.</p></aside>
 <details class="more"><summary>필요한 계정 4개 보기</summary><div class="more-body"><div class="table"><table><thead><tr><th>계정</th><th>비용</th><th>언제</th></tr></thead><tbody><tr><td>구글 플레이 콘솔</td><td>25달러, 한 번만</td><td>구글 출시</td></tr><tr><td>원스토어 개발자센터</td><td>무료</td><td>원스토어 출시</td></tr><tr><td>Firebase</td><td>무료</td><td>3회차</td></tr><tr><td>AdMob</td><td>무료</td><td>4회차</td></tr></tbody></table></div>
-<p>구글 플레이 콘솔은 신분증 인증과 안드로이드 폰 기기 인증이 있어요. AdMob은 구글 플레이 콘솔과 같은 계정을 쓰면 편해요. 원스토어는 가입 전에 미성년자 가입 조건과 정산 방법을 확인해요.</p></div></details>
+<p>구글 플레이 콘솔은 신분증 인증과 안드로이드 폰 기기 인증이 있어요. AdMob은 구글 플레이 콘솔과 같은 계정을 쓰면 편해요. 원스토어에서 유료 상품을 팔 계획이 생기면 미성년자도 정산받을 수 있는지 먼저 확인해요.</p></div></details>
 <details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">보호자께 안내할 것</span></summary><div class="note-body"><p>개인 계정은 스토어에 이름이나 연락처가 공개될 수 있어요. 수익 정산(계좌, 세금)은 계정 주인 이름으로만 돼요. 비밀번호와 2단계 인증은 보호자가 관리하고, 필요할 때 같이 로그인해요.</p></div></details>
 </div></section>
 <section class="step" id="s1-2-card"><div class="step-no" aria-hidden="true">2</div><div class="step-body"><h3><span class="step-label">Step 2</span>14일 테스트 테스터 모으기</h3><label class="done-box"><input type="checkbox" class="done" id="s1-2"><span>다 했어요</span></label>
@@ -696,7 +696,8 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 }
 </code></pre></div>
 <aside class="note ok"><div class="note-label">확인</div><p>▶ 플레이 → 버튼 → 회색 가짜 광고가 5초 → <strong>Close</strong> 를 누르면 보상을 받아요. 중간에 X로 닫으면 보상이 없어요.</p></aside>
-<details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">광고 준비가 안 됐을 때 버튼을 숨기고 싶어요</span></summary><div class="note-body"><p><code>doubleButton.interactable = LaunchKit.Ads.IsRewardedReady;</code> 를 결과 화면을 열 때 넣어요. 광고는 미리 받아 둬야 해서 앱을 켠 직후 몇 초는 준비가 안 돼 있어요.</p></div></details>
+<details class="note stuck"><summary><span class="note-label">막히면</span><span class="peek">광고 준비가 안 됐을 때 버튼을 끄고 싶어요</span></summary><div class="note-body"><p><code>doubleButton.interactable = LaunchKit.Ads.IsRewardedReady;</code> 를 <strong>Update()</strong> 안에 넣어요. 광고는 나중에 준비되기도 해서 결과 화면을 열 때 한 번만 확인하면 버튼이 계속 꺼져 있을 수 있어요.</p></div></details>
+<details class="note why"><summary><span class="note-label">왜 이렇게 해요?</span><span class="peek">광고가 아예 안 나오면요?</span></summary><div class="note-body"><p>인터넷이 끊기거나 원스토어에만 출시했을 때는 광고가 안 나올 수 있어요. 그래서 <strong>광고 없이도 다음으로 가는 버튼</strong>이 꼭 있어야 해요. "한 번 더 살아나기" 옆에는 "그만하기"를 같이 둬요.</p></div></details>
 </div></section>
 <section class="step" id="s4-3-card"><div class="step-no" aria-hidden="true">3</div><div class="step-body"><h3><span class="step-label">Step 3</span>전면 광고 붙이기</h3><label class="done-box"><input type="checkbox" class="done" id="s4-3"><span>다 했어요</span></label>
 <p>결과 화면에서 다음 화면으로 <strong>넘어갈 때</strong> 불러요. 광고가 닫히면 그다음 화면으로 가요.</p>
@@ -861,7 +862,7 @@ details:not(.note):not(.more)[open] summary { margin-bottom: 6px }
 <ol start="1"><li><a href="https://dev.onestore.co.kr" rel="noopener">원스토어 개발자센터</a> → 보호자 계정 로그인 → <strong>앱 등록</strong></li><li>앱 종류 <strong>게임</strong>, 패키지 이름은 Unity와 <strong>똑같이</strong></li><li><strong>판매정보</strong>: Step 5의 이름과 설명, 그래픽 이미지(1024x578), 아이콘, <code>onestore</code> 폴더의 스크린샷</li><li><strong>판매자 정보</strong>: 이메일, 웹사이트에 <code>https://아이디.github.io/</code></li><li><strong>연령등급</strong>: 콘텐츠 평가 설문 (제출 메모의 <strong>콘텐츠 등급 설문</strong> 답 참고)</li><li><strong>바이너리</strong>: AAB 올리기 → 앱 서명은 <strong>원스토어가 앱 서명 키 관리</strong></li><li><strong>검증 요청</strong></li></ol>
 <aside class="note ok"><div class="note-label">확인</div><p>앱 상태가 <strong>검증중</strong>이에요.</p></aside>
 <details class="note why"><summary><span class="note-label">왜 이렇게 해요?</span><span class="peek">제출 메모가 뭐예요?</span></summary><div class="note-body"><p>스토어 자료 창의 <strong>제출 메모 만들기</strong> 를 누르면 <code>StoreFiles/제출메모.txt</code> 에 두 스토어 설문에 옮겨 적을 답이 정리돼요. 키트가 켜 둔 기능 기준이에요.</p></div></details>
-<details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">원스토어 광고 수익은 적어요</span></summary><div class="note-body"><p>AdMob은 원스토어를 <strong>지원 스토어로 인정하지 않아요.</strong> 그래서 원스토어에만 있는 동안에는 광고가 <strong>조금만</strong> 나와요. 구글 플레이에 출시하고 AdMob에서 스토어를 연결하면 그때부터 제대로 나와요. 원스토어 출시는 "진짜 유저에게 처음 보여 주는 경험"으로 생각해요.</p></div></details>
+<details class="note teacher"><summary><span class="note-label">선생님</span><span class="peek">원스토어 광고 수익은 적어요</span></summary><div class="note-body"><p>AdMob은 원스토어를 <strong>지원 스토어로 인정하지 않아요.</strong> 그래서 원스토어에만 있는 동안에는 광고가 <strong>조금만</strong> 나오거나 안 나올 수 있어요. 구글 플레이에 <strong>공개 출시</strong>하고 AdMob에서 스토어를 연결하면 앱 심사를 받고, 통과하면 이 제한이 풀려요. (비공개 테스트 중에는 연결할 수 없어요) 그 뒤 원스토어에서 설치한 사람에게도 잘 나오는지는 구글 문서에 없어서 직접 봐야 해요. 원스토어 출시는 "진짜 유저에게 처음 보여 주는 경험"으로 생각해요.</p></div></details>
 </div></section>
 <section class="step" id="s5-8-card"><div class="step-no" aria-hidden="true">8</div><div class="step-body"><h3><span class="step-label">Step 8</span>검수 결과 확인하기</h3><label class="done-box"><input type="checkbox" class="done" id="s5-8"><span>다 했어요</span></label>
 <p>검수는 보통 며칠 걸려요. 결과는 보호자 이메일과 개발자센터 <strong>검증 히스토리</strong>에서 봐요.</p>
